@@ -1,0 +1,9 @@
+project: savantenvs/librecad
+target: fuzz_dxf_read
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dxf_read/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dxf_read
+    libfuzzer: true
+    timeout: 10
