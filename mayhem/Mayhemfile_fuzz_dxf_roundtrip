@@ -1,0 +1,10 @@
+project: savantenvs/librecad
+target: fuzz_dxf_roundtrip-mined-f94ca6e
+# seed-from: https://app.mayhem.security/savantenvs/librecad/fuzz-dxf-read
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dxf_roundtrip-mined-f94ca6e/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dxf_roundtrip
+    libfuzzer: true
+    timeout: 10
